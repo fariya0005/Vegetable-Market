@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</head>
+  <body>
+
+ 
+  
+
+  <nav class="flex items-center justify-between bg-gradient-to-r from-white to-[#EFEBE3] p-4">
+    <!-- Logo (Always Visible) -->
+    <img src="logo-header.png" alt="Logo" class="h-12 w-auto">
+
+    <!-- Hamburger Icon (Only Visible on Mobile) -->
+    <button id="menu-btn" class="block md:hidden text-gray-700 text-2xl">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Navbar Links (Desktop: Centered, Mobile: Hidden) -->
+    <ul id="menu" class="hidden md:flex md:items-center md:justify-center w-full text-gray-700 absolute md:static top-16 left-0 bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0 my-10 mx-20">
+        <div class="flex flex-col md:flex-row md:justify-center md:space-x-20 w-full">
+            <li><a href="#" class="block py-2 px-4 hover:text-clifford">Product</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:text-clifford">Services</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:text-clifford">Contact us</a></li>
+        </div>
+
+        <div class="flex justify-center space-x-6 py-4 mr-10">
+            <i class="fa-solid fa-magnifying-glass text-lg"></i>
+            <i class="fa-solid fa-cart-shopping text-lg"></i>
+        </div>
+
+        <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4 py-2">
+            <button class="border-2 border-[#179800] rounded-lg px-3 py-1">Login</button>
+            <button class="border-2 border-green-500 px-3 py-1 bg-[#179800] rounded-lg text-white">Register</button>
+        </div>
+    </ul>
+</nav>
+
+<!-- JavaScript for Mobile Menu Toggle -->
+<script>
+    document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('menu').classList.toggle('hidden');
+    });
+</script>
+
+<div class="flex-col justify-center bg-gradient-to-r from-white to-[#EFEBE3] ">
+  <h1 class="text-3xl text-[#111111] text-center font-bold">Freshness <span class="text-[#179800]">You Can
+  <br>  Count </span> On, Prices You’ll Love!</h1>
+  <p class="text-base text-[#111111] text-center font-normal mt-5 lg:text-lg text-[#111111] text-center font-normal mt-5">
+    Shop your daily essentials at unbeatable prices. 
+   <br> From fresh produce to pantry staples, we’ve got you covered every day!
+  </p>
+  <img class="w-4/5 mx-auto lg:w-2/5 mx-auto " src="hero-vegetables.png" alt="vegetable-offer">
+</div>
+
+<div class="mt-10 mx-20 flex flex-col sm:flex-col lg:flex-row justify-center space-x-0 lg:space-x-5">
+
+  <div class="border-none rounded-lg px-3 py-1 mb-10 bg-[#EFEBE3]">
+    <img class="w-1/4 rounded-full border-white bg-white mx-auto "src="service.png" alt="vegetable">
+    <h2 class="text-2xl text-[#111111] text-center font-bold">24/7 Services </h2>
+    <p class="text-base text-[#111111] text-center font-normal mt-5">
+      Our friendly staff will be there to help you find the perfect vegetable. 
+    </p>
+  </div>
+  <div class="border-none rounded-lg px-3 py-1 mb-10 bg-[#EFEBE3]">
+    <img class="w-1/4 rounded-full border-white bg-white mx-auto "src="delivery.png" alt="vegetable">
+    <h2 class="text-2xl text-[#111111] text-center font-bold">Fast Delivery </h2>
+    <p class="text-base text-[#111111] text-center font-normal mt-5">
+      Our friendly staff will be there to help you find the perfect vegetable. 
+    </p>
+  </div>
+  <div class="border-none rounded-lg px-3 py-1 mb-10 bg-[#EFEBE3]">
+    <img class="w-1/4 rounded-full border-white bg-white mx-auto "src="healthy.png" alt="vegetable">
+    <h2 class="text-2xl text-[#111111] text-center font-bold">Healthy Products </h2>
+    <p class="text-base text-[#111111] text-center font-normal mt-5">
+      Our friendly staff will be there to help you find the perfect vegetable. 
+    </p>
+  </div>
+</div>
+</body>
+</html>
